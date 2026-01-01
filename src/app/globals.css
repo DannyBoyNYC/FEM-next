@@ -41,9 +41,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
 }
 
 :root {
@@ -122,4 +119,33 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* React MD Editor styles */
+.w-md-editor {
+  background-color: hsl(var(--background));
+}
+
+.w-md-editor-text-textarea,
+.w-md-editor-text {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+}
+
+.w-md-editor.w-md-editor-focus {
+  border-color: hsl(var(--ring));
+}
+
+.w-md-editor-bar {
+  background-color: hsl(var(--muted));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.w-md-editor-bar svg {
+  color: hsl(var(--muted-foreground));
+}
+
+.w-md-editor-bar button:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
 }
